@@ -37,19 +37,13 @@ Given the example "Potsdamer Platz", the response would look like this:
 }
 ```
 
-Note: 
-In this case I wasn't sure what kind of result was expected, 
-so I went with this simple output.
-
-
 ### Class Overview
 
 *GoogleMaps:*
 - `Gina\GoogleMaps\GeoCode`: makes http requests to Google and parses response
 - `Gina\GoogleMaps\ResponseParser`: interface for parsing the Google api response 
-(if you dont like the simple response data I used, feel free to implement this and pass it to the geocoder)
 - `Gina\GoogleMaps\SimpleResponseParser`: minimal implementation of above interface
-- `Gina\GoogleMaps\HttpClient`: interface expecting a single "GET" method, feel free to implement with Guzzle etc to pass to the geocoder
+- `Gina\GoogleMaps\HttpClient`: interface expecting a single "GET" method
 - `Gina\GoogleMaps\GeoCodeException`: domain exception thrown by the geocoder
 
 *Controllers:*
